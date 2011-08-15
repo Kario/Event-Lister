@@ -1,5 +1,9 @@
 EventLister::Application.routes.draw do
-  # The priority is based upon order of creation:
+	get 'event/new'
+	post 'event', :controller => :event, :action => :create  
+	#Yes, Im just copying it word for word right now.
+
+# The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
