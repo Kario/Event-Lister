@@ -1,10 +1,2 @@
-<form action='/event' method='post'>
-
-	<label>Event Name: <input id='event_name' name='event_name' type='text' /></label>
-	<label>Event Name: <input id='date' name='date' type='text' /></label>
-	<label>Event Name: <input id='location' name='location' type='text' /></label>
-	<label>Event Name: <input id='time' name='time' type='text' /></label>
-	<label>Event Name: <input id='pInCharge' name='pInCharge' type='text' /></label>
-
-	<input calue='Create Event' type='submit' />
-</form>
+<em><%= flash[:error] %></em>
+<%= render :partial => 'form' %>
