@@ -1,7 +1,11 @@
 EventLister::Application.routes.draw do
-	get 'event/new'
+	get 'event/new', :controller => :event, :action => :new, :as => :new_event
+	get 'event', :controller => :event, :action => :index
 	post 'event', :controller => :event, :action => :create  
 	#Yes, Im just copying it word for word right now.
+	
+	get 'event/:id', :controller => :event, :action => :show, :as => :event
+
 
 # The priority is based upon order of creation:
   # first created -> highest priority.
