@@ -1,10 +1,15 @@
 EventLister::Application.routes.draw do
-	get 'event/new', :controller => :event, :action => :new, :as => :new_event
-	get 'event', :controller => :event, :action => :index
-	post 'event', :controller => :event, :action => :create  
-	#Yes, Im just copying it word for word right now.
+
+	root :to => "events#index"
 	
-	get 'event/:id', :controller => :event, :action => :show, :as => :event
+	get "events/index"
+  get "events/new"
+  post "events/create"
+  get "events/edit/:id",  :controller => :events, :action => :edit
+  post "events/update/:id", :controller => :events, :action => :update 
+  get "events/show"
+  get "events/delete/:id",  :controller => :events, :action => :delete
+  post "events/destroy/:id", :controller => :events, :action => :destroy
 
 
 # The priority is based upon order of creation:

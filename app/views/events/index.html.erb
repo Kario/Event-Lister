@@ -1,0 +1,9 @@
+<h2> All Events </h2>
+
+<ul>
+<% @events.each do |event| %>
+	<li><%= event.event_name %> <%=link_to("View Event", {:action => 'show', :id => event.id}) %>
+	
+<% end %>
+</ul>
+

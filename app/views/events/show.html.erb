@@ -1,0 +1,9 @@
+<h2>Profile for <%= @event.event_name %> </h2>
+
+<p>Event Name: <strong><%= @event.event_name %></strong></p>
+<p>Event Date: <strong><%= @event.date %></strong></p>
+<p>Event Location: <strong><%= @event.location %></strong></p>
+<p>Event Time: <strong><%= @event.time %></strong></p>
+<p>Person In Charge: <strong><%= @event.pInCharge %></strong></p>
+<p><%= link_to(" << Back to list", {:action => "index"}) %></p>
+
