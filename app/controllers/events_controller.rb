@@ -7,7 +7,7 @@ class EventsController < ApplicationController
 	end
 
 	def show
-		puts "+++++++++++++++++ #{params}"
+		
 		@event = Event.find(params[:id])
 	end
 
@@ -19,9 +19,9 @@ class EventsController < ApplicationController
 	
 	def create
 	  @event = Event.new(params[:event])
-		if event = Event.save(params[:event])
+		if event = @event.save(params[:event])
 			flash[:success] = "Profile created successfully"
-			redirect_to event_path(event.id)
+		
 			redirect_to(:action => 'index')
 		else
 			flash[:error] = "Error creating profile"

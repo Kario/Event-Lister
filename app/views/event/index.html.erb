@@ -1,8 +1,0 @@
-<h2> All Events </h2>
-
-<ul>
-<% @events.each do |event| %>
-	<li><%= event.event_detail %> <%= link_to "View Event", event_path(event.id) %></li>
-<% end %>
-</ul>
-

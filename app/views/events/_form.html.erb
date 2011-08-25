@@ -1,5 +1,5 @@
-<form action='/event' method='post'>
-<%= form_for @event, :url => { :action => :create } do |f| %>
+
+<%= form_for @event, :url => { :action => 'create' } do |f| %>
 
 	<label>Event Name: <%= f.text_field :event_name %></label>
 	<label>Event Date: <%= f.text_field :date %></label>
